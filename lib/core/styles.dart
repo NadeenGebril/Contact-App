@@ -12,8 +12,28 @@ class AppTextStyles {
     fontSize: 16,
     fontWeight: FontWeight.bold,
   );
+  static const TextStyle text10Style = TextStyle(
+    color: AppColors.goldColor,
+    fontSize: 10,
+    fontWeight: FontWeight.bold,
+  );
+  static const TextStyle titleMediumTextdarkBlueStyle = TextStyle(
+    color: AppColors.darkBlueColor,
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+  );
+  static const TextStyle text10darkBlueStyle = TextStyle(
+    color: AppColors.darkBlueColor,
+    fontSize: 10,
+    fontWeight: FontWeight.bold,
+  );
   static const TextStyle bodySmallTextStyle = TextStyle(
     color: AppColors.goldColor,
+    fontSize: 10,
+    fontWeight: FontWeight.normal,
+  );
+  static const TextStyle bodySmallTextdarkBlueStyle = TextStyle(
+    color: AppColors.darkBlueColor,
     fontSize: 10,
     fontWeight: FontWeight.normal,
   );

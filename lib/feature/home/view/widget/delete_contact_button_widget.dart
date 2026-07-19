@@ -26,10 +26,7 @@ class DeleteContactButtonWidget extends StatelessWidget {
         children: [
           Icon(Icons.delete_rounded, color: AppColors.goldColor),
           SizedBox(width: 6),
-          Text(
-            AppText.deleteText,
-            style: AppTextStyles.titleMediumTextStyle.copyWith(fontSize: 10),
-          ),
+          Text(AppText.deleteText, style: AppTextStyles.text10Style),
         ],
       ),
     );

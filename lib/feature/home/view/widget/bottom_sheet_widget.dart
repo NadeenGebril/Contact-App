@@ -4,13 +4,19 @@ import 'package:contact/core/dimentions.dart';
 import 'package:contact/core/styles.dart';
 import 'package:contact/core/text.dart';
 import 'package:contact/feature/home/cubit/contact_cubit_cubit.dart';
-import 'package:contact/feature/home/view/widget/entry_data_box.dart';
+import 'package:contact/feature/home/view/widget/form_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class BottomSheetWidget extends StatelessWidget {
+class BottomSheetWidget extends StatefulWidget {
   const BottomSheetWidget({super.key});
 
+  @override
+  State<BottomSheetWidget> createState() => _BottomSheetWidgetState();
+}
+
+class _BottomSheetWidgetState extends State<BottomSheetWidget> {
+  final formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     final contactCubit = context.watch<ContactCubit>();
@@ -73,24 +79,15 @@ class BottomSheetWidget extends StatelessWidget {
           ),
         ),
         SizedBox(height: 10),
-        EntryDataBox(
-          controller: contactCubit.userNameController,
-          text: 'Enter User Name',
-        ),
-        EntryDataBox(
-          controller: contactCubit.emailController,
-          text: 'Enter User Email',
-        ),
-        EntryDataBox(
-          controller: contactCubit.phoneController,
-          text: 'Enter User Phone',
-        ),
+        FormWidget(formKey: formKey, contactCubit: contactCubit),
         SizedBox(height: 10),
         Padding(
           padding: const EdgeInsets.only(left: 20, right: 20),
           child: ElevatedButton(
             onPressed: () {
-              contactCubit.addContact();
+              if (formKey.currentState!.validate()) {
+                contactCubit.addContact();
+              }
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: AppColors.goldColor,
@@ -102,9 +99,7 @@ class BottomSheetWidget extends StatelessWidget {
             child: Center(
               child: Text(
                 AppText.enterUserText,
-                style: AppTextStyles.titleMediumTextStyle.copyWith(
-                  color: AppColors.darkBlueColor,
-                ),
+                style: AppTextStyles.titleMediumTextdarkBlueStyle,
               ),
             ),
           ),

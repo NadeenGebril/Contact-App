@@ -51,9 +51,7 @@ class ContactInfoWidget extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
                         contact.userName,
-                        style: AppTextStyles.bodySmallTextStyle.copyWith(
-                          color: AppColors.darkBlueColor,
-                        ),
+                        style: AppTextStyles.bodySmallTextdarkBlueStyle,
                       ),
                     ),
                   ),
@@ -76,10 +74,7 @@ class ContactInfoWidget extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: Text(
                             contact.email,
-                            style: AppTextStyles.titleMediumTextStyle.copyWith(
-                              color: AppColors.darkBlueColor,
-                              fontSize: 10,
-                            ),
+                            style: AppTextStyles.text10darkBlueStyle,
                           ),
                         ),
                       ),
@@ -96,10 +91,7 @@ class ContactInfoWidget extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: Text(
                             contact.phone,
-                            style: AppTextStyles.titleMediumTextStyle.copyWith(
-                              color: AppColors.darkBlueColor,
-                              fontSize: 10,
-                            ),
+                            style: AppTextStyles.text10darkBlueStyle,
                           ),
                         ),
                       ),

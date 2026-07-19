@@ -40,22 +40,20 @@ class ContactCubit extends Cubit<ContactState> {
   }
 
   void addContact() {
-    if (userNameController.text.isNotEmpty &&
-        emailController.text.isNotEmpty &&
-        phoneController.text.isNotEmpty) {
-      contacts.add(
-        ContactModel(
-          userName: userNameController.text,
-          email: emailController.text,
-          phone: phoneController.text,
-          photo: selectedImage?.path,
-        ),
-      );
-    }
+    contacts.add(
+      ContactModel(
+        userName: userNameController.text.trim(),
+        email: emailController.text.trim(),
+        phone: phoneController.text.trim(),
+        photo: selectedImage?.path,
+      ),
+    );
+
     selectedImage = null;
     userNameController.clear();
     emailController.clear();
     phoneController.clear();
+
     checkContacts();
   }
 
