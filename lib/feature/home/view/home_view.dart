@@ -13,7 +13,9 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ContactCubit, ContactState>(
       builder: (context, state) {
-        if (state is ContactEmpty || state is ContactDraftChanged) {
+        final contactCubit = context.watch<ContactCubit>();
+        if (state is ContactEmpty ||
+            (state is ContactDraftChanged && contactCubit.contacts.isEmpty)) {
           return const Scaffold(
             backgroundColor: AppColors.darkBlueColor,
             body: HomeViewEmptyBody(),

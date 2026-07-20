@@ -1,4 +1,6 @@
 import 'package:contact/core/assets.dart';
+import 'package:contact/core/colors.dart';
+import 'package:contact/core/dimentions.dart';
 import 'package:contact/feature/home/view/home_view.dart';
 import 'package:flutter/material.dart';
 
@@ -27,8 +29,8 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Image.asset(AssetsData.splashImage),
+        padding: const EdgeInsets.all(0),
+        child: Image.asset(AssetsData.splashImage, color: AppColors.goldColor),
       ),
     );
   }

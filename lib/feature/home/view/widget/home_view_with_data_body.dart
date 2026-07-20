@@ -11,11 +11,11 @@ class HomeViewWithDataBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Positioned(
-          top: 80,
-          left: 20,
-          child: Image.asset(AssetsData.routeLogo, width: 100),
-        ),
+        // Positioned(
+        //   top: 80,
+        //   left: 20,
+        //   child: Image.asset(AssetsData.routeLogo, width: 100),
+        // ),
         Padding(
           padding: const EdgeInsets.only(left: 20, right: 20, top: 80),
           child: ContactsListWidget(),

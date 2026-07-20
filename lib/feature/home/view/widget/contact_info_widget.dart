@@ -27,12 +27,12 @@ class ContactInfoWidget extends StatelessWidget {
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: contact.photo == null
-                          ? const AssetImage(AssetsData.contact1Image)
+                          ? const AssetImage(AssetsData.contactImage)
                           : FileImage(File(contact.photo!)),
 
                       fit: BoxFit.cover,
                     ),
-                    color: AppColors.redColor,
+                    color: AppColors.whiteColor,
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(15),
                       topRight: Radius.circular(15),

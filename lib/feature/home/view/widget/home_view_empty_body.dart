@@ -13,11 +13,11 @@ class HomeViewEmptyBody extends StatelessWidget {
     return Stack(
       children: [
         Center(child: Image.asset(AssetsData.listImage)),
-        Positioned(
-          top: 80,
-          left: 20,
-          child: Image.asset(AssetsData.routeLogo, width: 100),
-        ),
+        // Positioned(
+        //   top: 80,
+        //   left: 20,
+        //   child: Image.asset(AssetsData.routeLogo, width: 100),
+        // ),
         Positioned(
           top: Dimensions.screenHeight(context) / 1.45,
           width: Dimensions.screenWidth(context),
